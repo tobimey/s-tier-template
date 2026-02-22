@@ -17,11 +17,11 @@
     "find-mismatches": "pnpm dlx syncpack list-mismatches"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.4",
+    "@biomejs/biome": "^2.4.0",
     "lefthook": "^2.1.1",
     "turbo": "^2.8.10",
     "typescript": "catalog:",
-    "ultracite": "7.2.0"
+    "ultracite": "7.2.3"
   },
   "packageManager": "pnpm@10.20.0",
   "engines": {
