@@ -1,0 +1,6 @@
+{
+  "name": "@repo/ts-config",
+  "exports": {
+    "./base.json": "./base.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://v2-8-10.turborepo.dev/schema.json",
+  "globalEnv": ["NODE_ENV"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "//#check": {},
+    "//#fix": {
+      "cache": false
+    }
+  },
+  "ui": "tui" // better & more modern approach
+}

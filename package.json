@@ -1,27 +1,30 @@
 {
   "name": "s-tier-template",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome check",
-    "format": "biome format --write"
-  },
-  "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "dev:website": "turbo run dev --filter=website",
+    "dev:sponsor": "turbo run dev --filter=sponsor",
+    "check-types": "turbo run check-types",
+    "clean": "turbo clean",
+    "update": "pnpm update -r",
+    "check": "ultracite check",
+    "format": "biome format --write",
+    "fix": "ultracite fix",
+    "prepare": "lefthook install",
+    "find-mismatches": "pnpm dlx syncpack list-mismatches"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.0",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@biomejs/biome": "^2.4.4",
+    "lefthook": "^2.1.1",
+    "turbo": "^2.8.10",
+    "typescript": "catalog:",
+    "ultracite": "7.2.0"
+  },
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22.0.0"
   }
 }
