@@ -1,4 +1,8 @@
-# S-Tier-Stack
+# S-Tier-Template 
+
+Welcome, this is the S-Tier-Template, a fully working starter for your next app. Run ``npx create-next-app`` and see magic happen. Visit localhost:3000/ and follow the instructions. Setup only takes a few minutes. 
+
+## S-Tier-Stack: 
 
 ### package manager / pnpm
 
@@ -31,3 +35,7 @@ No Auth hosting anywhere, no free plan banners, you got all the control. Setup i
 ### Hosting? 
 
 You decide. Vercel is by far simplest. 
+
+### Linting & Formatting / Biome + Ultracite
+
+Eslint + Prettier is also fine but Biome is newer, faster and only needs one file. In combination with ultracite it is preconfigured and works well when working with AI.  
