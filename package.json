@@ -5,16 +5,13 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "dev:website": "turbo run dev --filter=website",
-    "dev:sponsor": "turbo run dev --filter=sponsor",
-    "check-types": "turbo run check-types",
-    "clean": "turbo clean",
-    "update": "pnpm update -r",
+    "typecheck": "turbo run check-types",
     "check": "ultracite check",
-    "format": "biome format --write",
     "fix": "ultracite fix",
+    "clean": "turbo clean",
     "prepare": "lefthook install",
-    "find-mismatches": "pnpm dlx syncpack list-mismatches"
+    "deps:update": "pnpm update -r",
+    "deps:mismatches": "pnpm dlx syncpack list-mismatches"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.0",

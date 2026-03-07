@@ -1,6 +1,36 @@
 # S-Tier-Template 
 
-Welcome, this is the S-Tier-Template, a fully working starter for your next app. Run ``npx create-next-app`` and see magic happen. Visit localhost:3000/ and follow the instructions. Setup only takes a few minutes. 
+THIS IS STILL IN DEVELOPMENT, USE IT ON YOUR OWN RISK.
+
+Welcome, this is the S-Tier-Template, a fully working starter for your next app. Run ``npx create-next-app`` and see magic happen. Visit localhost:3000/ and follow the instructions. Setup only takes a few minutes.
+
+## Setup Guide 
+
+1. run npx s-tier 
+2. run pnpm i & pnpm dev to get started 
+3. setup your needed env variables
+  - This includes a DATABASE_SECRET
+  - If you use auth you need to generate a BETTER_AUTH_SECRET via openssl
+4. complete the checklist by deleting the todo-list.tsx and the actions.ts files
+
+## Opinions of this repo 
+
+You are allowed to have different opinions but these opinion are what I think a good starting point. They are already implemented and just for you to know. 
+
+- Alphabetical props sorting
+- import from React instead of writing React.* (like useState instead of React.useState)
+- Next.js [cacheComponents](https://nextjs.org/docs/app/getting-started/cache-components) is activated
+- packages and apps are prefexied with @repo/* so that when you import them anywhere its clear where they come from 
+
+## Recommendations 
+
+*Vscode settings:*
+- for optimal tailwind experience toggle Quick Suggestions to on for strings
+- prefer absolute imports by setting Javascript/Typescript Import Module Specifier to non-relative
+
+*Extensions*
+- Biome 
+- TailwindCss Intellisense
 
 ## S-Tier-Stack: 
 
