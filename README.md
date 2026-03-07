@@ -1,71 +1,59 @@
-# S-Tier-Template 
+# S-Tier Template
 
-THIS IS STILL IN DEVELOPMENT, USE IT ON YOUR OWN RISK.
+> A production-ready Next.js starter. Run `npx create-next-app`, follow the setup, and ship.
 
-Welcome, this is the S-Tier-Template, a fully working starter for your next app. Run ``npx create-next-app`` and see magic happen. Visit localhost:3000/ and follow the instructions. Setup only takes a few minutes.
+**⚠️ In development — use at your own risk.**
 
-## Setup Guide 
+## Quick Start
 
-1. run npx s-tier 
-2. run pnpm i & pnpm dev to get started 
-3. setup your needed env variables
-  - This includes a DATABASE_SECRET
-  - If you use auth you need to generate a BETTER_AUTH_SECRET via openssl
-4. complete the checklist by deleting the todo-list.tsx and the actions.ts files
+```bash
+npx s-tier-app
+# Choose pnpm, bun, or npm when prompted
+pnpm i && pnpm dev   # or: bun i && bun dev  |  npm i && npm run dev
+```
 
-## Opinions of this repo 
+1. Configure env variables (including `DATABASE_SECRET`; for auth, add `BETTER_AUTH_SECRET` via openssl)
+2. Complete the checklist: remove `todo-list.tsx` and `actions.ts`
 
-You are allowed to have different opinions but these opinion are what I think a good starting point. They are already implemented and just for you to know. 
+## Tech Stack
 
-- Alphabetical props sorting
-- import from React instead of writing React.* (like useState instead of React.useState)
-- Next.js [cacheComponents](https://nextjs.org/docs/app/getting-started/cache-components) is activated
-- packages and apps are prefexied with @repo/* so that when you import them anywhere its clear where they come from 
+| Layer | Choice | Why |
+|-------|--------|-----|
+| **Framework** | Next.js | Industry standard. Plain React lacks many features; TanStack Start is still experimental and missing production features. |
+| **Package Manager** | pnpm, bun, or npm | Choose during setup. pnpm is recommended; bun is fast; npm works everywhere. |
+| **CSS** | Tailwind | Utility-first CSS that lets you build custom designs without leaving your HTML. |
+| **Styling System** | Shadcn | Reusable, copy-paste UI components on accessible primitives. You own the code and can customize freely. |
+| **Database + ORM** | Neon Postgres + Drizzle, or Convex | PostgreSQL + Drizzle: battle-tested, AI-friendly, TypeScript-first. Convex: optional real-time backend with great DX. Choose during setup. |
+| **Validation** | Zod | Type-safe validation with excellent DX. |
+| **Authentication** | Better Auth | Preconfigured and ready to use. Great DX, simple setup, excellent guides. Your user data stays in your own database. For heavy production use, consider paid services like Clerk or WorkOS. |
+| **Animation** | Motion + View Transitions | Motion has better DX than GSAP. View Transitions enable mobile-like screen transitions in the browser. |
+| **Hosting** | Your choice | Vercel is the simplest default for Next.js. Easy to switch to other platforms. |
+| **Monorepo** | Turborepo | The go-to solution for monorepos. [Watch this](https://youtu.be/ezb2neX9pIU?si=4OqhbX6g9UxXYyxk) if you're curious. |
+| **Linting & Formatting** | Biome + Ultracite | Faster than ESLint + Prettier, single config file. Ultracite preconfigures it for AI-assisted workflows. |
 
-## Recommendations 
+## Opinions
 
-*Vscode settings:*
-- for optimal tailwind experience toggle Quick Suggestions to on for strings
-- prefer absolute imports by setting Javascript/Typescript Import Module Specifier to non-relative
+These choices are already implemented and reflect what we consider a solid starting point:
 
-*Extensions*
-- Biome 
-- TailwindCss Intellisense
+- Alphabetical prop sorting
+- Import from React directly (e.g. `useState` instead of `React.useState`)
+- Next.js [Cache Components](https://nextjs.org/docs/app/getting-started/cache-components) enabled
+- Packages and apps prefixed with `@repo/*` for clear import origins
 
-## S-Tier-Stack: 
+## Recommendations
 
-### package manager / pnpm
+**VS Code**
 
-npm is slow, yarn is weird and bun is still to new and not supported everywhere. pnpm is fast, simple & save.
+- Enable Quick Suggestions for strings (better Tailwind autocomplete)
+- Set JavaScript/TypeScript Import Module Specifier to non-relative (prefer absolute imports)
 
-### Monorepo / Turborepo
+**Extensions**
 
-A monorepo is a nobrainer nowadays, turborepo is the only viable solution, watch (this)[https://youtu.be/ezb2neX9pIU?si=4OqhbX6g9UxXYyxk] video if you'r curious.
+- Biome
+- Tailwind CSS IntelliSense
 
-### Styling System / Shadcn 
+## Roadmap
 
-This is a style system that makes things easy & simple. 
-
-### Style Language / TailwindCSS
-
-Once you use it you will never go back. You gain so much speed. 
-
-### Framework / Next.js
-
-Plain React misses many features. Next.js is the most used Meta Framework, it has the biggest community and AI is well trained with it. Tanstack Start is to new and still in Beta, it misses many things, that Next.js has already solved.
-
-### Database / Postgres + Drizzle 
-
-Best experience currently. Convex is also a good choice but might not be suitable for all projects and needs new learning. For Database I suggest using neon db. Drizzle is a no-brainer it's faster and more convenient to use then Prisma. 
-
-### Authentication / Better Auth
-
-No Auth hosting anywhere, no free plan banners, you got all the control. Setup is damn simple.
-
-### Hosting? 
-
-You decide. Vercel is by far simplest. 
-
-### Linting & Formatting / Biome + Ultracite
-
-Eslint + Prettier is also fine but Biome is newer, faster and only needs one file. In combination with ultracite it is preconfigured and works well when working with AI.  
+- [] **Auth out of the box** — Better Auth preconfigured and ready to use
+- [] **Package manager choice** — pnpm, bun, or npm supported via setup
+- [] **Convex support** — Optional Convex integration available
